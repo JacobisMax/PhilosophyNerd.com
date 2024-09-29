@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhilosophyNerd.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #444;
+        }
+        .philosopher-image {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+        }
+        .history-section {
+            margin-top: 2rem;
+        }
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #f5f5f5;
+        }
+        body.dark-mode header {
+            background-color: #222;
+        }
+        body.dark-mode nav {
+            background-color: #555;
+        }
+        body.dark-mode .container {
+            background-color: #444;
+            color: #f5f5f5;
+        }
+        body.dark-mode a {
+            color: #f5f5f5;
+        }
+        body.dark-mode a:hover {
+            background-color: #666;
+        }
+        #quote-of-the-day {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PhilosophyNerd.com</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </header>
+    <nav>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#nietzsche">Friedrich Nietzsche</a>
+        <a href="#quotes">Quotes</a>
+        <a href="#quote-of-the-day">Quote of the Day</a>
+        <a href="#history">History</a>
+    </nav>
+    <div class="container" id="philosophy">
+        <h2>Philosophy</h2>
+        <p>Philosophy is the study of the fundamental nature of knowledge, reality, and existence. Philosophers seek to understand and question the world around us and our place in it.</p>
+    </div>
+    <div class="container" id="nietzsche">
+        <h2>Friedrich Nietzsche</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Nietzsche187a.jpg" alt="Friedrich Nietzsche" class="philosopher-image">
+        <p>Friedrich Nietzsche (1844-1900) was a German philosopher, cultural critic, poet, and philologist. His work has profoundly influenced modern intellectual history and Western philosophy.</p>
+        <h3>Nietzsche's Quotes</h3>
+        <ul>
+            <li>"God is dead. God remains dead. And we have killed him."</li>
+            <li>"He who has a why to live can bear almost any how."</li>
+            <li>"That which does not kill us makes us stronger."</li>
+            <li>"He who fights monsters should see to it that in the process he does not become a monster. And if you gaze long enough into an abyss, the abyss will gaze back into you."</li>
+        </ul>
+    </div>
+    <div class="container" id="quotes">
+        <h2>Quotes</h2>
+        <h3>Quotes by William Shakespeare</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Shakespeare.jpg" alt="William Shakespeare" class="philosopher-image">
+        <ul>
+            <li>"To be, or not to be, that is the question."</li>
+            <li>"All the world's a stage, and all the men and women merely players."</li>
+            <li>"The course of true love never did run smooth."</li>
+        </ul>
+        <h3>Quotes by Plato</h3>
+        <ul>
+            <li>"The greatest wealth is to live content with little."</li>
+            <li>"Wise men speak because they have something to say; fools because they have to say something."</li>
+            <li>"The beginning is the most important part of the work."</li>
+        </ul>
+        <h3>Quotes by Socrates</h3>
+        <ul>
+            <li>"The unexamined life is not worth living."</li>
+            <li>"I cannot teach anybody anything. I can only make them think."</li>
+            <li>"To find yourself, think for yourself."</li>
+            <li>"Wonder is the beginning of wisdom."</li>
+        </ul>
+        <h3>Quotes by Eckhart Tolle</h3>
+        <ul>
+            <li>"The power for creating a better future is contained in the present moment: You create a good future by creating a good present."</li>
+            <li>"Realize deeply that the present moment is all you have. Make the NOW the primary focus of your life."</li>
+            <li>"The time is now."</li>
+        </ul>
+        <h3>Quotes by Carl Jung</h3>
+        <ul>
+            <li>"Until you make the unconscious conscious, it will direct your life and you will call it fate."</li>
+            <li>"Who looks outside, dreams; who looks inside, awakes."</li>
+            <li>"Everything that irritates us about others can lead us to an understanding of ourselves."</li>
+        </ul>
+        <h3>Other Philosophers' Quotes</h3>
+        <ul>
+            <li>"The only thing I know is that I know nothing." - Socrates</li>
+            <li>"Death smiles at us all, but all a man can do is smile back." - Marcus Aurelius</li>
+            <li>"It is not death that a man should fear, but he should fear never beginning to live." - Marcus Aurelius</li>
+        </ul>
+    </div>
+    
+    <!-- Quote of the Day Section -->
+    <div class="container" id="quote-of-the-day">
+        <h2>Quote of the Day</h2>
+        <p id="quote-display">Loading...</p>
+        <button id="new-quote-button">New Quote</button>
+    </div>
+
+    <div class="container" id="history">
+        <h2>History</h2>
+        <div class="history-section">
+            <h3>Friedrich Nietzsche</h3>
+            <p>Friedrich Nietzsche was a German philosopher, cultural critic, composer, poet, philologist, and Latin and Greek scholar. He wrote several critical texts on religion, morality, contemporary culture, philosophy, and science, displaying a fondness for metaphor, irony, and aphorism.</p>
+        </div>
+        <div class="history-section">
+            <h3>Plato</h3>
+            <p>Plato was a philosopher in Classical Greece and the founder of the Academy in Athens, the first institution of higher learning in the Western world. He is widely considered one of the most important figures in the development of philosophy, especially the Western tradition.</p>
+        </div>
+        <div class="history-section">
+            <h3>Socrates</h3>
+            <p>Socrates was a classical Greek philosopher credited as one of the founders of Western philosophy and as being the first moral philosopher of the Western ethical tradition of thought. His philosophy is known only through the accounts of later classical writers, especially his students Plato and Xenophon.</p>
+        </div>
+    </div>
+    
+    <script>
+        const quotes = [
+            "Death smiles at us all, but all a man can do is smile back. - Marcus Aurelius",
+            "It is not death that a man should fear, but he should fear never beginning to live. - Marcus Aurelius",
+            "The power for creating a better future is contained in the present moment: You create a good future by creating a good present. - Eckhart Tolle",
+            "Realize deeply that the present moment is all you have. Make the NOW the primary focus of your life. - Eckhart Tolle",
+            "The time is now. - Eckhart Tolle",
+            "Until you make the unconscious conscious, it will direct your life and you will call it fate. - Carl Jung",
+            "Who looks outside, dreams; who looks inside, awakes. - Carl Jung",
+            "Everything that irritates us about others can lead us to an understanding of ourselves. - Carl Jung",
+            "Happiness is not something ready-made. It comes from your own actions. - Dalai Lama",
+            "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
+            "The greatest wealth is to live content with little. - Plato",
+            "Wise men speak because they have something to say; fools because they have to say something. - Plato",
+            "The unexamined life is not worth living. - Socrates",
+            "I cannot teach anybody anything. I can only make them think. - Socrates",
+            "To find yourself, think for yourself. - Socrates",
+            "Wonder is the beginning of wisdom. - Socrates"
+        ];
+
+        function getRandomQuote() {
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        function displayQuote() {
+            document.getElementById("quote-display").innerText = getRandomQuote();
+        }
+
+        document.getElementById("new-quote-button").addEventListener("click", displayQuote);
+        displayQuote();
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+</html>
